@@ -15,7 +15,7 @@ readme = "README.md"
 libc = "0.2"
 derivative = "2.0"
 gmp-mpfr-sys = "1.4"
-flint-sys = { path = "../flint-rs/flint-sys", version = "0.7", features = ["disable-make-check"] }
+flint-sys = { version = "0.7", features = ["disable-make-check"] }
 
 [features]
 default = ["disable-make-check"]
