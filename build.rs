@@ -200,7 +200,8 @@ fn build(env: &Environment) {
     println!("$ cd {:?}", &env.build_dir);
     let conf = String::from(
         format!(
-            "./configure --disable-shared --with-gmp={} --with-flint={}",
+            "./configure --disable-shared --with-gmp={} --with-mpfr={} --with-flint={}",
+            env.gmp_mpfr_dir.display(),
             env.gmp_mpfr_dir.display(),
             env.flint_dir.display(),
             )
@@ -424,4 +425,3 @@ fn system_cache_dir() -> Option<PathBuf> {
             })
     }
 }
-
